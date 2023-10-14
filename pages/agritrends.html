@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/agritrends.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu-container">
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img  src="../images/icons-menu.svg" alt="Menu Icon">
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">ADVISOR</a>
+                <a href="../pages/agritrends.html">AGRITRENDS</a>
+                <a href="#">PRODUCTS</a>
+                <a href="#">BLOG</a>
+                <a href="#">ABOUT US</a>
+            </div>
+            </div>
+            <img class="logo-image" src="../images/agri-logo.png" alt="Logo">
+            <img class="account-icon" src="../images/icons-account.svg" alt="Account Icon"> <!-- Added Account Icon -->
+        </div>
+        <button class="button weather">weather</button>
+        <button class="button pest">Pests and Diseases</button>
+        <button class="button soil">Soil</button>
+        <button class="button location">Location</button>
+        <img class="main-image" src="../images/trends.png" />
+    </div>
+    <button class="button-grow">TO GROW</button>
+
+</body>
+<script>
+    function toggleMenu() {
+    var menu = document.getElementById("dropdownMenu");
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
+</html>
