@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/advisor.css" rel="stylesheet" />
+  </head>
+  <body>
+<div class="header">
+    <div class="menu-container">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <img src="../images/icons-menu.svg" alt="Menu Icon" />
+      </div>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#">ADVISOR</a>
+        <a href="../pages/agritrends.html">AGRITRENDS</a>
+        <a href="#">STORE</a>
+        <a href="#">COMMUNITY</a>
+        <a href="#">ABOUT US</a>
+      </div>
+    </div>
+    <img class="logo-image" src="../images/agri-logo.png" alt="Logo" />
+    <div class="account-container">
+      <div class="account-icon-container" onclick="toggleIcon()">
+        <img
+        class="account-icon"
+          src="../images/icons-account.svg"
+          alt="Account Icon"
+        />
+      </div>
+      <div class="dropdown-icon" id="dropdownIcon">
+        <a href="#">SIGN UP</a>
+        <a href="#">ACCOUNT</a>
+        <a href="../pages/agritrends.html">CREATE POST</a>
+        <a href="#">SETTINGS</a>
+
+      </div>
+    </div>
+  </div>
+
+<div style="width: 100%; height: 100%; position: relative; background: white">
+
+    <img style="width: 593px; height: 719px; left: 814px; top: 85px; position: absolute; border-radius: 5px" src="https://via.placeholder.com/593x719" />
+    <div style="width: 1066px; height: 55px; left: 187px; top: 37px; position: absolute; text-align: center; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Your Intelligent Crop Advisor Insights are Ready!</div>
+    <div style="width: 758px; height: 721px; left: 39px; top: 85px; position: absolute; background: rgba(47, 101, 66, 0.26); border-radius: 5px"></div>
+    <div style="width: 633px; height: 461px; left: 110px; top: 80px; position: absolute; text-align: center; color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">There are several reasons why the crops mentioned would be ideal. First, they are all relatively easy to grow and don't require a lot of care. <br/>Second, they are all high in nutrients and calories, which is important for people who are trying to survive on limited resources. <br/>Third, they are all relatively drought-resistant, which is important in areas where water is scarce.</div>
+    <div style="width: 206px; height: 64px; left: 298px; top: 650px; position: absolute; background: #2F6542; border-radius: 16px"></div>
+    <div style="left: 307px; top: 650px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Regenerate</div>
+</div>
+</body>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("dropdownMenu");
+        var icon = document.getElementById("dropdownIcon");
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block";
+            icon.style.display = "none";  // Hide the icon dropdown
+            document.body.classList.add("openMenu");
+            document.body.classList.remove("openIcon");
+        } else {
+            menu.style.display = "none";
+            document.body.classList.remove("openMenu");
+        }
+    }
+    
+    function toggleIcon() {
+        var icon = document.getElementById("dropdownIcon");
+        var menu = document.getElementById("dropdownMenu");
+        if (icon.style.display === "none" || icon.style.display === "") {
+            icon.style.display = "block";
+            menu.style.display = "none";  // Hide the menu dropdown
+            document.body.classList.add("openIcon");
+            document.body.classList.remove("openMenu");
+        } else {
+            icon.style.display = "none";
+            document.body.classList.remove("openIcon");
+        }
+    }
+          
+        </script>
+</html>

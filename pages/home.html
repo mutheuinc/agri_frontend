@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/home.css" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="../css/home.css" rel="stylesheet">
-
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <iframe src="../attributes/header.html" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
-                <div class="background-image">
-            <div class="title">AGRISENSE</div>
-            <div class="subtitle">HARNESS THE POWER</div>
+      <div class="header">
+        <div class="menu-container">
+          <div class="menu-icon" onclick="toggleMenu()">
+            <img src="../images/icons-menu.svg" alt="Menu Icon" />
+          </div>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../pages/advisor.html">ADVISOR</a>
+            <a href="../pages/agritrends.html">AGRITRENDS</a>
+            <a href="#">STORE</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">ABOUT US</a>
+          </div>
         </div>
-        <img class="whatsapp-icon" src="../images/icons-whatsapp.svg" alt="WhatsApp Icon">
+        <img class="logo-image" src="../images/agri-logo.png" alt="Logo" />
+        <div class="account-container">
+          <div class="account-icon-container" onclick="toggleIcon()">
+            <img
+            class="account-icon"
+              src="../images/icons-account.svg"
+              alt="Account Icon"
+            />
+          </div>
+          <div class="dropdown-icon" id="dropdownIcon">
+            <a href="#">SIGN UP</a>
+            <a href="#">ACCOUNT</a>
+            <a href="../pages/agritrends.html">CREATE POST</a>
+            <a href="#">SETTINGS</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="background-image">
+        <div class="title">AGRISENSE</div>
+        <div class="subtitle">HARNESS THE POWER</div>
+
+        <img
+          class="whatsapp-icon"
+          src="../images/icons-whatsapp.svg"
+          alt="WhatsApp Icon"
+        />
+
+        <footer>
+          <p class="footer-text">Copyright © 2023 AgriSense</p>
+        </footer>
+      </div>
     </div>
-    <footer>
-        <p class="footer-text">Copyright © 2023 AgriSense</p>
-    </footer>
-</body>
-<script>
-
-
-    function toggleMenu() {
+    <script>
+function toggleMenu() {
     var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === "none") {
+    var icon = document.getElementById("dropdownIcon");
+    if (menu.style.display === "none" || menu.style.display === "") {
         menu.style.display = "block";
+        icon.style.display = "none";  // Hide the icon dropdown
+        document.body.classList.add("openMenu");
+        document.body.classList.remove("openIcon");
     } else {
         menu.style.display = "none";
+        document.body.classList.remove("openMenu");
     }
 }
 
-</script>
-
+function toggleIcon() {
+    var icon = document.getElementById("dropdownIcon");
+    var menu = document.getElementById("dropdownMenu");
+    if (icon.style.display === "none" || icon.style.display === "") {
+        icon.style.display = "block";
+        menu.style.display = "none";  // Hide the menu dropdown
+        document.body.classList.add("openIcon");
+        document.body.classList.remove("openMenu");
+    } else {
+        icon.style.display = "none";
+        document.body.classList.remove("openIcon");
+    }
+}
+      
+    </script>
+  </body>
 </html>
-
