@@ -3,45 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="../css/agritrends.css">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            background-color: #EAF7F4;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: #2C5F2D;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px;
+            align-items: start; /* Align to the top */
+        }
+
+        .weather-card {
+            background-color: #C1D1C7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            flex: 1;  /* Take equal width */
+        }
+
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;  /* Full width of the parent container */
+        }
+
+        .detail-card {
+            width: 48%;  /* Adjust width to fit two cards side by side */
+            background-color: #F5FFFC;
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="menu-container">
-
-            <div class="menu-icon" onclick="toggleMenu()">
-                <img  src="../images/icons-menu.svg" alt="Menu Icon">
-            </div>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="#">ADVISOR</a>
-                <a href="../pages/agritrends.html">AGRITRENDS</a>
-                <a href="#">PRODUCTS</a>
-                <a href="#">BLOG</a>
-                <a href="#">ABOUT US</a>
-            </div>
-            </div>
-            <img class="logo-image" src="../images/agri-logo.png" alt="Logo">
-            <img class="account-icon" src="../images/icons-account.svg" alt="Account Icon"> <!-- Added Account Icon -->
-        </div>
-        <button class="button weather">weather</button>
-        <button class="button pest">Pests and Diseases</button>
-        <button class="button soil">Soil</button>
-        <button class="button location">Location</button>
-        <img class="main-image" src="../images/trends.png" />
+    <div class="header">
+        <div class="menu">☰</div>
+        <div class="logo">🌍</div>
+        <div class="profile">⚫</div>
     </div>
-    <button class="button-grow">TO GROW</button>
 
+    <div class="weather-container">
+        <div class="weather-card">
+            <div class="weather-icon">⛅</div>
+            <div>WEATHER</div>
+        </div>
+        <div class="weather-card">
+            <div class="sun-icon">🌞</div>
+            <div>It's sunny!</div>
+            <div>More details of today's weather...</div>
+            <div class="details">
+                <div class="detail-card">
+                    <div>Humidity</div>
+                    <div>55%</div>
+                </div>
+                <div class="detail-card">
+                    <div>Pressure</div>
+                    <div>1021 hPa</div>
+                </div>
+                <div class="detail-card">
+                    <div>Visibility</div>
+                    <div>10000 m</div>
+                </div>
+                <div class="detail-card">
+                    <div>Cloud Coverage</div>
+                    <div>75%</div>
+                </div>
+                <!-- You can add more detail cards here -->
+            </div>
+        </div>
+    </div>
 </body>
-<script>
-    function toggleMenu() {
-    var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
-    } else {
-        menu.style.display = "none";
-    }
-}
-</script>
 </html>

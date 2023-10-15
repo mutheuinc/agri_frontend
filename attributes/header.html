@@ -79,34 +79,64 @@ body.openMenu .dropdown-menu {
 <body>
     <div class="header">
         <div class="menu-container">
-            <div class="menu-icon" onclick="toggleMenu()">
-                <img src="../images/icons-menu.svg" alt="Menu Icon">
-            </div>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="#">ADVISOR</a>
-                <a href="../pages/agritrends.html">AGRITRENDS</a>
-                <a href="#">PRODUCTS</a>
-                <a href="#">BLOG</a>
-                <a href="#">ABOUT US</a>
-            </div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <img src="../images/icons-menu.svg" alt="Menu Icon" />
+          </div>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../pages/advisor.html">ADVISOR</a>
+            <a href="../pages/agritrends.html">AGRITRENDS</a>
+            <a href="#">STORE</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">ABOUT US</a>
+          </div>
         </div>
-        <img class="logo-image" src="../images/agri-logo.png" alt="Logo">
-        <img class="account-icon" src="../images/icons-account.svg" alt="Account Icon">
-    </div>
+        <img class="logo-image" src="../images/agri-logo.png" alt="Logo" />
+        <div class="account-container">
+          <div class="account-icon-container" onclick="toggleIcon()">
+            <img
+            class="account-icon"
+              src="../images/icons-account.svg"
+              alt="Account Icon"
+            />
+          </div>
+          <div class="dropdown-icon" id="dropdownIcon">
+            <a href="#">SIGN UP</a>
+            <a href="#">ACCOUNT</a>
+            <a href="../pages/agritrends.html">CREATE POST</a>
+            <a href="#">SETTINGS</a>
 
-<script>
-function toggleMenu() {
-    var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "block";
-        document.body.classList.add("openMenu");
-    } else {
-        menu.style.display = "none";
-        document.body.classList.remove("openMenu");
-    }
-}
-
-
-</script>
+          </div>
+        </div>
+      </div>
+      <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            var icon = document.getElementById("dropdownIcon");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+                icon.style.display = "none";  // Hide the icon dropdown
+                document.body.classList.add("openMenu");
+                document.body.classList.remove("openIcon");
+            } else {
+                menu.style.display = "none";
+                document.body.classList.remove("openMenu");
+            }
+        }
+        
+        function toggleIcon() {
+            var icon = document.getElementById("dropdownIcon");
+            var menu = document.getElementById("dropdownMenu");
+            if (icon.style.display === "none" || icon.style.display === "") {
+                icon.style.display = "block";
+                menu.style.display = "none";  // Hide the menu dropdown
+                document.body.classList.add("openIcon");
+                document.body.classList.remove("openMenu");
+            } else {
+                icon.style.display = "none";
+                document.body.classList.remove("openIcon");
+            }
+        }
+              
+            </script>
 </body>
 </html>
