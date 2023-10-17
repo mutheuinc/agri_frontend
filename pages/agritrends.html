@@ -1,96 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <style>
-        body {
-            font-family: Montserrat;
-            background-color: #EAF7F4;
-            margin: 0;
-            overflow-x: hidden;
-        }
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-        .header {
-            background-color: #2C5F2D;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
+    <link rel="stylesheet" href="../css/agritrends.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="statistics">
+      <div class="divroot">
+        <div class="iframe-body">
+          <div class="divmain-mf">
+            <div class="divsite-root">
+              <div class="divmasterpage">
+                <div class="main">
+                  <div class="div">
+                    <div class="div1">
+                      <div class="sectionmargin"></div>
+                      <div class="section">
+                        <div class="divv5auxf">
+                          <div class="divcomp-kq4wwjld">
+                            <div class="divbglayers-comp-kq4wwjld">
+                              <div class="divlwbaav"></div>
+                              <div class="wix-bg-media">
+                                <div class="wow-image">
+                                  <img
+                                    class="c837a6-aa803204cef842e0b9ad7d8-icon"
+                                    alt=""
+                                    src="./public/c837a6-aa803204cef842e0b9ad7d820e64f77cmv2jpg@2x.png"
+                                  />
+                                </div>
+                              </div>
+                              <div class="div2">
+                                <div class="divcomp-kq4wzwojmargin">
+                                  <div class="heading-1">
+                                    <b class="farming-statistics"
+                                      >Farming Statistics
+                                    </b>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="section1">
+                                <div class="divv5auxf">
+                                  <div class="divcomp-kq54xs3h">
+                                    <div class="divcomp-kq55g0uo">
+                                      <div class="divntiihl"></div>
+                                      <div class="div3">
+                                        <div class="pfont-5">
+                                          <b class="link-tripo">AGRISENSE</b>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="divcomp-kq54xwql"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divcomp-krer2sjtmargin">
+                        <div class="divcomp-krer2sjt">
+                          <div class="divpro-gallery-comp-krer2sjt">
+                            <div class="region">
+                              <div class="divpro-gallery-margin-contain">
+                                <div class="link">
+                                  <div class="divcomp-krer2sjt">
+                                    <div class="divitem-wrapper-da5cd55c-c9cb">
+                                      <img
+                                        class="c837a6-d5b3b2009d894fa2932bc20-icon"
+                                        alt=""
+                                        src="./public/c837a6-d5b3b2009d894fa2932bc20684b2a93dmv2webp@2x.png"
+                                      />
 
-        .weather-container {
-            display: flex;
-            justify-content: space-between;
-            margin: 40px;
-            align-items: start; /* Align to the top */
-        }
+                                      <div class="divitem-hover-flex-container">
+                                        <div class="divgallery-item-hover">
+                                          <div class="pseudo"></div>
+                                          <div class="divinfo-element-text">
+                                            <div class="divcomp-krer2sjt">
+                                              <div class="divinfo-member">
+                                                <b class="weather">Weather</b>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="link1">
+                                  <div class="divcomp-krer2sjt">
+                                    <div class="divitem-wrapper-da5cd55c-c9cb">
+                                      <img
+                                        class="c837a6-d5b3b2009d894fa2932bc20-icon"
+                                        alt=""
+                                        src="./public/c837a6-bf93fe6ee32a41b2b69211460f928b15mv2webp@2x.png"
+                                      />
 
-        .weather-card {
-            background-color: #C1D1C7;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 10px;
-            flex: 1;  /* Take equal width */
-        }
+                                      <div class="divitem-hover-flex-container">
+                                        <div class="divgallery-item-hover">
+                                          <div class="pseudo"></div>
+                                          <div class="divinfo-element-text">
+                                            <div class="divcomp-krer2sjt">
+                                              <div class="divinfo-member1">
+                                                <b class="weather">Soil</b>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="link2">
+                                  <div class="divcomp-krer2sjt">
+                                    <div class="divitem-wrapper-da5cd55c-c9cb">
+                                      <img
+                                        class="c837a6-d5b3b2009d894fa2932bc20-icon"
+                                        alt=""
+                                        src="./public/c837a6-f49b2d5464854cc18b19c7e183d05e2cmv2webp@2x.png"
+                                      />
 
-        .details {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;  /* Full width of the parent container */
-        }
+                                      <div class="divitem-hover-flex-container">
+                                        <div class="divgallery-item-hover">
+                                          <div class="pseudo"></div>
+                                          <div class="divinfo-element-text">
+                                            <div class="divcomp-krer2sjt">
+                                              <div class="divinfo-member2">
+                                                <b class="weather">Location</b>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="link3">
+                                  <div class="divcomp-krer2sjt">
+                                    <div class="divitem-wrapper-da5cd55c-c9cb">
+                                      <img
+                                        class="c837a6-d5b3b2009d894fa2932bc20-icon"
+                                        alt=""
+                                        src="./public/c837a6-f49b2d5464854cc18b19c7e183d05e2cmv2webp1@2x.png"
+                                      />
 
-        .detail-card {
-            width: 48%;  /* Adjust width to fit two cards side by side */
-            background-color: #F5FFFC;
-            margin: 10px 0;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="menu">☰</div>
-        <div class="logo">🌍</div>
-        <div class="profile">⚫</div>
-    </div>
-
-    <div class="weather-container">
-        <div class="weather-card">
-            <div class="weather-icon">⛅</div>
-            <div>WEATHER</div>
-        </div>
-        <div class="weather-card">
-            <div class="sun-icon">🌞</div>
-            <div>It's sunny!</div>
-            <div>More details of today's weather...</div>
-            <div class="details">
-                <div class="detail-card">
-                    <div>Humidity</div>
-                    <div>55%</div>
+                                      <div class="divitem-hover-flex-container">
+                                        <div class="divgallery-item-hover">
+                                          <div class="pseudo"></div>
+                                          <div class="divinfo-element-text">
+                                            <div class="divcomp-krer2sjt">
+                                              <div class="divinfo-member2">
+                                                <b class="weather">Grow</b>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="footer">
+                        <div class="footer1">
+                          <div class="section2">
+                            <div class="divcomp-kmc2y51l">
+                              <div class="div12">
+                                <div class="pfont-4">
+                                  <b class="link-autono">AGRISENSE</b>
+                                </div>
+                                <div class="pfont-8">
+                                  <div class="link-technology">Technology</div>
+                                </div>
+                                <div class="pfont-81">
+                                  <div class="link-about">About</div>
+                                </div>
+                                <div class="pfont-82">
+                                  <div class="link-careers">WhatsApp</div>
+                                </div>
+                                <div class="pfont-83">
+                                  <div class="link-careers">
+                                    Tel: +254 77788899
+                                  </div>
+                                </div>
+                                <div class="pfont-84">
+                                  <div class="email-agrisensegenzaigmailc">
+                                    Email: agrisensegenzai@gmail.com
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="div13">
+                              <div class="heading-2">
+                                <div class="subscribe">SUBSCRIBE</div>
+                              </div>
+                              <div class="pfont-85">
+                                <div class="sign-up-to">
+                                  Sign up to receive AgriSense news and updates.
+                                </div>
+                              </div>
+                              <div class="form">
+                                <div class="divcomp-kmkon1s1">
+                                  <div class="label">
+                                    <div class="email">Email *</div>
+                                  </div>
+                                  <div class="input"></div>
+                                </div>
+                                <div class="button">
+                                  <div class="pseudo4"></div>
+                                  <div class="pseudo5"></div>
+                                  <div class="subscribe1">Subscribe</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="section3">
+                            <div class="divcomp-kmc3du2o">
+                              <div class="by-agrisense">
+                                © 2023 by AgriSense
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="detail-card">
-                    <div>Pressure</div>
-                    <div>1021 hPa</div>
-                </div>
-                <div class="detail-card">
-                    <div>Visibility</div>
-                    <div>10000 m</div>
-                </div>
-                <div class="detail-card">
-                    <div>Cloud Coverage</div>
-                    <div>75%</div>
-                </div>
-                <!-- You can add more detail cards here -->
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
